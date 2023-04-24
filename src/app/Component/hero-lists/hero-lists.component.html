@@ -1,0 +1,23 @@
+<!-- <h2> {{hero}} </h2> -->
+<style>
+h2{
+    text-align: center;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+div{
+    text-align: center;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+</style>
+<h2>Hero Details</h2>
+<div>
+    <span>Hero name: </span>
+    <input [(ngModel)]="hero.name" placeholder="Hero name">
+  </div><br>
+<div><span>id: </span>{{hero.id}} | Name:<span> {{hero.name}}</span></div>
+
+
