@@ -1,0 +1,13 @@
+<style>
+    div{
+        text-align: center;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    }
+</style>
+<div>
+    <label for="item-input">Add a Hero:</label>
+    <input type="text" id="item-input" #newItem>
+    <button type="button" (click)="addNewItem(newItem.value)">Add to Heroes list</button>
+</div>

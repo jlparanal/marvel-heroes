@@ -1,0 +1,103 @@
+<!-- <h2> {{hero}} </h2> -->
+<style>
+  /* Heroes List Component styles */
+
+.heroes {
+margin: 0 0 2em 0;
+list-style-type: none;
+padding: 0;
+width: 15em;
+left: 50%;
+transform: translateX(225%);
+}
+
+.heroes li {
+display: flex;
+}
+
+.heroes button {
+flex: 1;
+cursor: pointer;
+position: relative;
+left: 0;
+background-color: #EEE;
+margin: .5em;
+padding: 0;
+border-radius: 4px;
+display: flex;
+align-items: stretch;
+height: 1.8em;
+}
+
+.heroes button:hover {
+color: #2c3a41;
+background-color: #e6e6e6;
+left: .1em;
+}
+
+.heroes button:active {
+background-color: #525252;
+color: #fafafa;
+}
+
+.heroes button.selected {
+background-color: black;
+color: white;
+}
+
+.heroes button.selected:hover {
+background-color: #505050;
+color: white;
+}
+
+.heroes button.selected:active {
+background-color: black;
+color: white;
+}
+
+.heroes .badge {
+display: inline-block;
+font-size: small;
+color: white;
+padding: 0.4em 0.7em 0 0.8em;
+background-color: #405061;
+line-height: 1em;
+margin-right: .8em;
+border-radius: 4px 0 0 4px;
+}
+
+.heroes .name {
+align-self: center;
+}
+
+h2{
+    text-align: center;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.details{
+    text-align: center;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+</style>
+<h2>My Heroes</h2>
+  <ul class="heroes">
+    <li *ngFor="let hero of heroes">
+      <button (click)="onSelect(hero)">
+        <span class="badge">{{ hero.id }}</span>
+        <span class="name">{{ hero.name }}</span>
+      </button>
+    </li>
+  </ul>
+
+<h2>Hero Details</h2>
+<div class="details">
+    <span>Hero name: </span>
+    <input [(ngModel)]="hero.name" placeholder="Hero name"><br><br>
+    <span>id: </span>{{hero.id}} | Name:<span> {{hero.name}}</span>
+  </div>
+

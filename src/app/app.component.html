@@ -1,0 +1,65 @@
+<style>
+ .name {
+    font-family: 'Arial', sans-serif;
+    font-size: 15px;
+    font-weight: normal;
+    text-align: left;
+    color: white;
+    margin: 0;
+    background-color: #C3002F;
+    padding: 20px;
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 5px;
+  }
+h1 {
+    font-family: 'Arial', sans-serif;
+    font-size: 36px;
+    font-weight: bold;
+    text-align: center;
+    color: #2c3e50;
+    margin-top: 50px;
+    color: #C3002F;
+  }
+  .container {
+    background-color: black;
+    padding: 40px;
+    border-radius: 8px;
+    margin-top: 10px;
+    width: 40%; 
+    text-align: center;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  
+  .Ironman,
+  .Lloyd {
+    font-family: 'Arial', sans-serif;
+    font-size: 20px;
+    font-weight: normal;
+    color: green;
+    margin: 0;
+    text-align: left;
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+  ul{
+    text-align: center;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+</style>
+<p class="name">John Lloyd Parañal</p>
+<h1>{{title}}</h1>
+<div class="container">
+    <p class="Ironman">Iron Man: Hello!</p>
+    <p class="Lloyd">Lloyd: Hi!</p>
+</div>
+<app-hero-lists></app-hero-lists><br>
+<app-item-output (newItemEvent)="addItem($event)"></app-item-output>
+<ul style="list-style-type:none">
+  <li *ngFor="let item of items">{{item}}</li>
+</ul>
